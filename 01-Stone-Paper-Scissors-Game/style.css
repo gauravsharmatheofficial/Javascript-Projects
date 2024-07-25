@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.prevent-select {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+body {
+  height: 100vh;
+  background-image: url(./Images/rps.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  color: white;
+}
+
+.div-50 {
+  width: 50%;
+}
+
+.choices {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  position: absolute;
+  right: 100px;
+  bottom: 40px;
+}
+
+.choice {
+  display: flex;
+  color: white;
+  gap: 5px;
+  background-color: #27262b;
+  padding: 5px 40px;
+  border-radius: 10px;
+  font-size: 18px;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  width: 150px;
+  justify-content: center;
+}
+
+.choice:hover {
+  background-color: #dc2625;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  cursor: pointer;
+}
+
+.right-div,
+.left-div {
+  display: inline-flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+}
+.right-div .img-chosen {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+.score-board {
+  /* background-color: #27262b; */
+  background-color: #6b55c7;
+  border-radius: 50px;
+  display: inline-flex;
+  padding: 15px;
+  align-items: center;
+  color: white;
+  font-size: 16px;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 150px;
+}
+
+.vs-svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.msg-container :hover {
+  cursor: pointer;
+}
+
+#user-img,
+#com-img {
+  width: 50%;
+}
+
+#com-choice,
+#user-choice {
+  text-align: center;
+}

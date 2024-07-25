@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissor Game</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="prevent-select">
+    <div class="div-50 left-div">
+      <div class="img-chosen prevent-select">
+        <img id="com-img" src="./Images/rock.png" alt="" />
+      </div>
+      <div><p id="com-choice"></p></div>
+    </div>
+    <div class="div-50 right-div">
+      <div class="img-chosen prevent-select">
+        <img id="user-img" src="./Images/rock.png" alt="" />
+      </div>
+      <div><p id="user-choice"></p></div>
+      <div class="choices">
+        <div class="choice prevent-select" id="rock">
+          <img src="./Images/icon-rock.svg" alt="rock" />
+          <p>Rock</p>
+        </div>
+        <div class="choice prevent-select" id="paper">
+          <img src="./Images/icon-paper.svg" alt="paper" />
+          <p>Paper</p>
+        </div>
+        <div class="choice prevent-select" id="scissor">
+          <img src="./Images/icon-scissors.svg" alt="Scissor" />
+          <p>Scissor</p>
+        </div>
+      </div>
+
+      <div class="score-board prevent-select">
+        <div class="score">
+          <p id="com-score">0</p>
+          <p>Computer</p>
+        </div>
+        <div class="score">
+          <p id="draw-score">0</p>
+          <p>Draw</p>
+        </div>
+
+        <div class="score">
+          <p id="user-score">0</p>
+          <p>User Score</p>
+        </div>
+      </div>
+
+      <div class="vs-svg prevent-select">
+        <img src="./Images/VS.svg" alt="" />
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

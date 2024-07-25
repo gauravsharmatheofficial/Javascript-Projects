@@ -1,5 +1,6 @@
 let inputBox = document.getElementById("input-box");
 let listContainer = document.getElementById("list-container");
+let addBtn = document.getElementById("add-btn");
 
 function addTodo() {
   if (inputBox.value === "") {
@@ -13,6 +14,7 @@ function addTodo() {
     li.appendChild(span);
   }
   inputBox.value = "";
+  saveData();
 }
 
 listContainer.addEventListener(
@@ -20,9 +22,29 @@ listContainer.addEventListener(
   (e) => {
     if (e.target.tagName === "LI") {
       e.target.classList.toggle("checked");
+      saveData();
     } else if (e.target.tagName === "SPAN") {
       e.target.parentElement.remove();
+      saveData();
     }
   },
   false
 );
+
+addBtn.addEventListener("click", addTodo);
+
+inputBox.addEventListener("keypress", function (event) {
+  if (event.key === "Enter") {
+    addTodo();
+  }
+});
+
+function saveData() {
+  localStorage.setItem("data", listContainer.innerHTML);
+}
+
+function showData() {
+  listContainer.innerHTML = localStorage.getItem("data");
+}
+
+showData();
